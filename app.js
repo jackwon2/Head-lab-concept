@@ -24,6 +24,7 @@
     const media = document.createElement(item.type === "video" ? "video" : "img");
     media.dataset.kind = item.type;
     media.dataset.source = item.src;
+    if (detail) media.style.setProperty("--media-scale", String(item.scale || 1));
     if (item.poster) media.dataset.poster = item.poster;
     media.setAttribute("aria-label", item.alt || item.label || "Research media");
     if (item.type === "video") {
@@ -102,7 +103,7 @@
     $("detail-description").textContent = tile.description || axis.description;
     $("detail-media").replaceChildren();
     detailMedia.length = 0;
-    $("detail-media").style.setProperty("--detail-columns", String(Math.min(tile.media.length, 2)));
+    $("detail-media").style.setProperty("--detail-columns", String(tile.media.length));
     tile.media.forEach((item) => {
       const figure = element("figure", "detail-figure");
       figure.append(makeMedia(item, true));

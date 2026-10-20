@@ -62,8 +62,8 @@ button:focus-visible { outline: 3px solid #295d98; outline-offset: 4px; }
 .detail-header h2 { font-size: clamp(22px, 2.6vw, 31px); line-height: 1.25; letter-spacing: -.02em; margin: 0; }
 .close-detail { display: grid; place-items: center; border: 1px solid var(--line); width: 34px; height: 34px; border-radius: 50%; background: #fff; font-size: 25px; line-height: 1; cursor: pointer; flex-shrink: 0; }
 .detail-media { display: grid; gap: 6px; grid-template-columns: repeat(var(--detail-columns, 1), minmax(0, 1fr)); align-items: start; }
-.detail-figure { margin: 0; min-width: 0; }
-.detail-figure img, .detail-figure video { display: block; width: 100%; max-height: 60dvh; min-height: 150px; object-fit: contain; background: #f8f9fb; border-radius: 5px; }
+.detail-figure { margin: 0; min-width: 0; overflow: hidden; border-radius: 5px; }
+.detail-figure img, .detail-figure video { display: block; width: 100%; max-height: 60dvh; min-height: 150px; object-fit: contain; background: #f8f9fb; transform: scale(var(--media-scale, 1)); transform-origin: center; }
 .detail-figure figcaption { color: var(--muted); font-size: 11px; margin-top: 8px; text-align: center; }
 .detail-description { font-size: 15px; color: #596579; line-height: 1.8; margin: 14px 0 0; word-break: keep-all; }
 .detail-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
@@ -94,6 +94,9 @@ button:focus-visible { outline: 3px solid #295d98; outline-offset: 4px; }
   .media-gallery { height: 440px; margin: 13px; }
   .tile-name { font-size: 13px; }
   .concept-footer { flex-direction: column; gap: 3px; margin-top: 0; font-size: 11px; }
+}
+@media (max-width: 760px) {
+  .detail-media { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 500px) {
   .lab-concept { padding: 10px 12px 15px; }
