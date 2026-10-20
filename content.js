@@ -48,7 +48,7 @@ window.LAB_CONTENT = {
           media: [
             { type: "gif", src: "assets/periodic-wave-a.gif", poster: "assets/periodic-wave-a-poster.png", alt: "주기 구조 A의 파동 응답", label: "Periodic wave A", scale: 1.7 },
             { type: "gif", src: "assets/periodic-wave-b.gif", poster: "assets/periodic-wave-b-poster.png", alt: "주기 구조 B의 파동 응답", label: "Periodic wave B", scale: 1.8 },
-            { type: "gif", src: "assets/crack.gif", alt: "균열 주변의 파동 전달 특성", label: "Crack", scale: 1.15 }
+            { type: "gif", src: "assets/crack.gif", poster: "assets/crack-poster.png", alt: "균열 주변의 파동 전달 특성", label: "Crack", scale: 1.15 }
           ]
         },
         {
