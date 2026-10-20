@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="구조 설계, 시스템 진단, 자율 제어·운용을 연결하는 기계공학 연구">
+  <title>Dynamics for Mechanical Engineering · Hyuk Lee</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 문구와 미디어는 content.js, 색상·크기·여백은 styles.css에서 수정합니다. -->
+  <main id="lab-concept" class="lab-concept" aria-label="연구실 연구 분야">
+    <div class="research-controls">
+      <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="true">
+        <span class="motion-icon" aria-hidden="true"></span>
+        <span id="motion-label">움직임 멈추기</span>
+      </button>
+    </div>
+
+    <section id="research-board" class="research-board" aria-label="연구 분야와 적용 범위"></section>
+
+    <footer class="concept-footer">
+      <p id="footer-note"></p>
+      <p class="interaction-hint">그림을 누르면 크게 볼 수 있습니다.</p>
+    </footer>
+    <noscript>
+      <p>Dynamics · Multiphysics &amp; AI · Physical AI</p>
+      <p>연구 그림과 애니메이션을 보려면 브라우저의 JavaScript를 켜주세요.</p>
+    </noscript>
+  </main>
+
+  <dialog id="media-dialog" class="media-dialog" aria-labelledby="detail-title" aria-describedby="detail-description">
+    <div class="dialog-content">
+      <header class="detail-header">
+        <div><p id="detail-axis" class="detail-axis"></p><h2 id="detail-title"></h2></div>
+        <button id="close-detail" class="close-detail" type="button" aria-label="확대 보기 닫기">×</button>
+      </header>
+      <div id="detail-media" class="detail-media"></div>
+      <p id="detail-description" class="detail-description"></p>
+      <div class="detail-bottom">
+        <button id="detail-motion" class="detail-motion" type="button">움직임 멈추기</button>
+        <span class="detail-keyboard">Esc 키로 닫기</span>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
